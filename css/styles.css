@@ -9,7 +9,8 @@
     --cloud-color:#ffffff;
     --cornflower-color:#E7E9FC;
     --lightcloud-color:#F4F4FD;
-    --pressedstate-color:#404BBF;   
+    --pressedstate-color:#404BBF; 
+    --subtletext-color:#8E8F99;
 }
 
 *,*::before,*::after { 
@@ -43,7 +44,10 @@ body {
 
     /*     --------  HEADER  --------       */   
 .header {
-    border-bottom: 1px solid #E7E9FC; 
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 .header-container {
     margin-left: auto;
@@ -146,6 +150,9 @@ body {
     background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-title {
@@ -196,6 +203,23 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.box-list {
+    display: flex;
+    justify-content: center;
+}
+
+.features-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--lightcloud-color);
+    margin-bottom: 8px;
+
 }
 
 .features-item {
@@ -313,37 +337,98 @@ body {
     letter-spacing: 0.02em;
     color: var(--text-color);
     margin: 0;
+    margin-bottom: 8px;
     text-align: center;
 }
 .social-list {
     display: flex;
     gap: 24px;
-    padding-top: 8px;
-    justify-content: center;   
+    justify-content: center;
+    margin: 0px 16px;   
 }
 
 .teamsoc-list-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--primary-brand-color);
 }
 
-.teamsoc-list-link:hover {
+.teamsoc-list-link:hover,
+.teamsoc-list-link:focus {
     background-color: var(--pressedstate-color);
 }
 
+    /*     --------  CUSTOMERS  --------    */
+
+.customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.customers-title {
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}
+
+.box-customers {
+    display: flex;
+    gap: 24px;
+}
+
+.box-customers-list {
+    display: flex;
+    justify-content: center;
+}
+
+.customers-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--subtletext-color);
+    border-radius: 4px;
+}
+
+.customers-box:hover,
+.customers-box:focus {
+    border: 1px solid var(--pressedstate-color);
+}
+
+.logo {
+    fill: var(--subtletext-color);
+}
+
+.customers-box:hover .logo,
+.customers-box:focus .logo {
+    fill: var(--pressedstate-color);
+}
+
+
     /*     --------  FOOTER  --------       */  
-
-
     
 .footer {
     background-color: var(--dark-color);
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.container-footer {
+    display: flex;
+    width: 1158px;
+    padding: 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-logo {
@@ -357,7 +442,15 @@ body {
     letter-spacing: 0.02em;
     color: var(--cornflower-color);
     width: 264px;
-}    
+}   
+
+.footer-media {
+    padding-left: 120px;
+}
+
+.soc-media {
+    margin-bottom: 16px;
+}
 
 .logo-web {
     font-family: 'Raleway';
@@ -376,6 +469,37 @@ body {
     letter-spacing: 0.03em;
     color: var(--lightcloud-color);
 }
+
+
+
+.soc-media {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud-color);
+}
+
+.social-med-list {
+    display: flex;
+    gap: 16px;
+    
+
+}
+
+
+.media-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
 
     /*     --------  Стили для Портфолио  --------       */ 
 
@@ -437,7 +561,11 @@ body {
 
 .image-content {
     border: 1px solid var(--cornflower-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08); 
     border-top: none;
+    cursor: pointer;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
