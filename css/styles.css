@@ -11,6 +11,7 @@
     --lightcloud-color:#F4F4FD;
     --pressedstate-color:#404BBF; 
     --subtletext-color:#8E8F99;
+    --success-color:#31D0AA
 }
 
 *,*::before,*::after { 
@@ -44,6 +45,9 @@ body {
 
     /*     --------  HEADER  --------       */   
 .header {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
@@ -279,9 +283,13 @@ body {
     /*     --------  TEAM  --------       */  
 
 .team {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--lightcloud-color);
     padding-top: 120px;
     padding-bottom: 120px;
+
 }
    
 .team-title {
@@ -390,7 +398,8 @@ body {
     justify-content: center;
 }
 
-.customers-box {
+
+.customers-box-item{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,17 +409,14 @@ body {
     border-radius: 4px;
 }
 
-.customers-box:hover,
-.customers-box:focus {
+.customers-box-item:hover ,
+.customers-box-item:focus {
     border: 1px solid var(--pressedstate-color);
+    
 }
 
-.logo {
-    fill: var(--subtletext-color);
-}
-
-.customers-box:hover .logo,
-.customers-box:focus .logo {
+.customers-box-item:hover .company-list ,
+.customers-box-item:focus .company-list {
     fill: var(--pressedstate-color);
 }
 
@@ -421,6 +427,9 @@ body {
     background-color: var(--dark-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-footer {
@@ -497,7 +506,12 @@ body {
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+}
 
+.media-list-link:hover,
+.media-list-link:focus {
+    background-color: var(--success-color);
+    
 }
 
 
@@ -539,6 +553,10 @@ body {
 .portfolio-item :focus {
     color: var(--cloud-color);
     background: var(--pressedstate-color);
+    border: 1px solid var(--pressedstate-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 2px 1px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .content-list {
