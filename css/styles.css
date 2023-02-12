@@ -45,13 +45,7 @@ body {
 
     /*     --------  HEADER  --------       */   
 .header {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
     border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
-                0px 1px 1px rgba(46, 47, 66, 0.16), 
-                0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 .header-container {
     margin-left: auto;
@@ -215,7 +209,7 @@ body {
     justify-content: center;
 }
 
-.features-box {
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,9 +278,6 @@ body {
     /*     --------  TEAM  --------       */  
 
 .team {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--lightcloud-color);
     padding-top: 120px;
     padding-bottom: 120px;
@@ -353,7 +344,7 @@ body {
     display: flex;
     gap: 24px;
     justify-content: center;
-    margin: 0px 16px;   
+  
 }
 
 .teamsoc-list-link {
@@ -368,6 +359,7 @@ body {
 
 .teamsoc-list-link:hover,
 .teamsoc-list-link:focus {
+    border-radius: 50%;
     background-color: var(--pressedstate-color);
 }
 
@@ -389,18 +381,16 @@ body {
     color: var(--dark-color);
 }
 
-.box-customers {
+
+.customers-icon-list {
+    display: flex;
+    justify-content: center;
     display: flex;
     gap: 24px;
 }
 
-.box-customers-list {
-    display: flex;
-    justify-content: center;
-}
 
-
-.customers-box-item{
+.customers-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,22 +398,28 @@ body {
     height: 88px;
     border: 1px solid var(--subtletext-color);
     border-radius: 4px;
+    cursor: pointer;
 }
 
-.company-list {
+.company-icon {
     fill: var(--subtletext-color);
 }
 
-.customers-box-item:hover ,
-.customers-box-item:focus {
+.customers-list:hover ,
+.customers-list:focus {
     border: 1px solid var(--pressedstate-color);
+    border-radius: 4px;
     
 }
-
-.customers-box-item:hover .company-list ,
-.customers-box-item:focus .company-list {
+.customers-list:hover .company-icon  ,
+.customers-list:focus .company-icon {
     fill: var(--pressedstate-color);
 }
+
+
+
+
+
 
 
     /*     --------  FOOTER  --------       */  
@@ -432,9 +428,6 @@ body {
     background-color: var(--dark-color);
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .container-footer {
@@ -459,11 +452,7 @@ body {
 }   
 
 .footer-media {
-    padding-left: 120px;
-}
-
-.soc-media {
-    margin-bottom: 16px;
+    margin-left: 120px;
 }
 
 .logo-web {
@@ -487,12 +476,11 @@ body {
 
 
 .soc-media {
-    display: flex;
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud-color);
+    margin-bottom: 16px;
 }
 
 .social-med-list {
@@ -550,7 +538,7 @@ body {
     text-align: center;
     cursor: pointer;
     background: var(--lightcloud-color);
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--cornflower-color);
     border-radius: 4px;
 }
 
@@ -573,22 +561,24 @@ body {
 }
 
 .content-item {
-    background: var(--cloud-color);
+    margin-bottom: 48px;
+}
+
+.content-item:hover {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08); 
 
 }
 
 .content-item:not(:nth-last-child(3n-2)) {
     margin-right: 24px;
-    margin-bottom: 48px;
+    
 }
 
 .image-content {
     border: 1px solid var(--cornflower-color);
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
-                0px 1px 1px rgba(46, 47, 66, 0.16), 
-                0px 1px 6px rgba(46, 47, 66, 0.08); 
     border-top: none;
-    cursor: pointer;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
